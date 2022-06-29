@@ -1,0 +1,30 @@
+.image--carousel {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home--title {
+  text-align: center;
+}
+
+.description--container {
+  margin-top: 40px;
+}
+
+.description {
+  margin: 0 auto;
+  width: 65%;
+  text-align: left;
+}
+
+@media (max-width: 920px) {
+  .description {
+    width: 85%;
+  }
+
+  .image--carousel {
+    height: 70vh;
+  }
+}/*# sourceMappingURL=home.css.map */

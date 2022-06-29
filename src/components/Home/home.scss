@@ -1,0 +1,33 @@
+$layout-breakpoint-small: 920px;
+.image--carousel{
+  
+    height: 100vh;
+    width:100%;
+    object-fit: cover;    
+}
+.home--title{
+    text-align: center;
+    
+}
+.description--container{
+    margin-top:40px;
+
+}
+.description{
+    margin:0 auto;
+    width: 65%;
+    text-align: left;
+}
+@media (max-width: $layout-breakpoint-small) {
+    .description{
+       
+        width: 85%;
+        
+    }
+    .image--carousel{
+  
+        height: 70vh;
+           
+    }
+}
+

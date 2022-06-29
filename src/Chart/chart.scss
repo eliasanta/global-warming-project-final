@@ -1,0 +1,41 @@
+$layout-breakpoint-small: 920px;
+
+.chart-container{
+  margin-top:115px;
+  margin-bottom:50px;
+}
+
+.chartStyle {
+    margin:0 auto;
+    max-height:450px;
+    max-width:750px;
+  };
+
+.img--chart{
+    width:700px;
+    margin:30px auto;
+    border-radius: 7px;
+}
+.chart--paragraph{
+    width: 70%;
+    margin:15px auto;
+    text-align:left;
+    font-size:18px;
+}
+.chart--data{
+    margin-top: 55px;
+    margin-bottom:20px;
+    
+}
+
+@media (max-width: $layout-breakpoint-small) {
+    .img--chart{
+        width:350px;
+        margin:25px auto;
+    }
+    .chart--paragraph{
+        width: 80%;
+        margin:13px auto;
+        
+    }
+}
