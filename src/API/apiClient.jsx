@@ -8,9 +8,14 @@ function useClientApi(url) {
 
   useEffect(() => {
     setLoading(true);
+
     axios
       .get(url)
       .then((response) => {
+        /* if (!(Object.entries(response).length === 0)) {
+          console.log(Object.entries(response).length);
+          
+        } */
         setData(response.data);
       })
       .catch((err) => {
@@ -19,6 +24,7 @@ function useClientApi(url) {
       .finally(() => {
         setLoading(false);
       });
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
   return { data, loading, error };

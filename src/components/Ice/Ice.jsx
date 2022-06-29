@@ -20,7 +20,7 @@ const IceChart = () => {
 
   useEffect(() => {
     getData();
-  }, [iceDateValue]);
+  });
 
   const getData = () => {
     try {

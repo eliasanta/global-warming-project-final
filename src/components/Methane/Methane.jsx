@@ -19,7 +19,7 @@ const MetaneChart = () => {
 
   useEffect(() => {
     getData();
-  }, [methaneDateValue]);
+  });
 
   const getData = () => {
     try {

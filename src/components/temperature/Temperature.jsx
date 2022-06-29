@@ -20,9 +20,10 @@ const TemperatureChart = () => {
   const dataLength = temperature.length;
   const [rangeMax, setRangeMax] = useState(1709); //dynamic set don' work
   const [rangeMin, setRangeMin] = useState(0); //dynamic set don't work
+
   useEffect(() => {
     getData();
-  }, [temperatureDateValue]);
+  }); //provato a toglierlo e non da errori
 
   const getData = () => {
     try {

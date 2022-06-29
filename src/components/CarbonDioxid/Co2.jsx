@@ -22,7 +22,7 @@ const CarbonDioxidChart = () => {
 
   useEffect(() => {
     getData();
-  }, [co2DateValue]);
+  });
 
   const getData = () => {
     try {

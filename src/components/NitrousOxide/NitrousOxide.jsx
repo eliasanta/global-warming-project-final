@@ -15,7 +15,7 @@ const NitrousOxideChart = () => {
   const lastData = n2oDateValue.slice(n2oDateValue.length - 1);
   useEffect(() => {
     getData();
-  }, [n2oDateValue]);
+  });
   const dataLength = n2o.length;
   const [rangeMax, setRangeMax] = useState(254); //dynamic set don' work
   const [rangeMin, setRangeMin] = useState(0); //dynamic set don't work
