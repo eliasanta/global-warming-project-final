@@ -23,7 +23,8 @@
     "sass-autoprefixer": "^1.0.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4",
-    "webpack": "^5.73.0"
+    "webpack": "^5.73.0",
+    "webpack-dev-server": "^4.9.2"
   },
   "overrides": {
     "autoprefixer": "10.4.5"
