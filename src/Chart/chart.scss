@@ -7,8 +7,8 @@ $layout-breakpoint-small: 920px;
 
 .chartStyle {
     margin:0 auto;
-    max-height:450px;
-    max-width:750px;
+    max-height:600px;
+    max-width:900px;
   };
 
 .img--chart{
@@ -22,11 +22,10 @@ $layout-breakpoint-small: 920px;
     text-align:left;
     font-size:18px;
 }
-.chart--data{
-    margin-top: 55px;
-    margin-bottom:20px;
-    
+.today--value{
+    font-size: 24px;
 }
+
 
 @media (max-width: $layout-breakpoint-small) {
     .img--chart{
@@ -38,4 +37,9 @@ $layout-breakpoint-small: 920px;
         margin:13px auto;
         
     }
+    .chartStyle {
+        margin:0 auto;
+        max-height:400px;
+        max-width:650px;
+      };
 }

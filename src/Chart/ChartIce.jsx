@@ -55,7 +55,7 @@ function ChartIce({
   };
   return (
     <div>
-      <Line className="chart--data" data={Data} />
+      <Line data={Data} />
     </div>
   );
 }

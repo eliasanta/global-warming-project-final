@@ -1,10 +1,25 @@
+$layout-breakpoint-small: 920px;
 .nav--container{
-    padding:8px;
+    padding:9px;
 }
 .nav--title{
     font-size:30px;
-    margin-left:20px
+    margin-left:20px;
+    &:hover{
+        transition: transform .2s;
+        transform: scale(1.05)
+    }
 }
+
 .nav--page{
-    font-size:20px;
+    font-size:22px;
+    &:hover{
+        transition: transform .2s;
+        transform: scale(0.95)
+    }
+}
+@media (max-width: $layout-breakpoint-small) {
+    .nav--container{
+        padding:6px;
+    }
 }

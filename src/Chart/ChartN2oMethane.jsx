@@ -46,7 +46,7 @@ function ChartCo2({
   };
   return (
     <div>
-      <Line className="chart--data" data={Data} />
+      <Line data={Data} />
     </div>
   );
 }

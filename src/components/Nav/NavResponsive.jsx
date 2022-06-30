@@ -39,9 +39,10 @@ function NavResponsive() {
                 <Nav.Link className="nav--page" href="co2">
                   Co2
                 </Nav.Link>
-                <Nav.Link className="nav--page" href="n2o">
-                  N2o
-                </Nav.Link>
+                <div className="nav--page">
+                  <Nav.Link href="n2o">N2o</Nav.Link>
+                </div>
+
                 <Nav.Link className="nav--page" href="methane">
                   Methane
                 </Nav.Link>

@@ -37,6 +37,14 @@ function HomeCarousel() {
         />
         <div className="layer"></div>
       </Carousel.Item>
+      <Carousel.Item interval={5000} className="image--container">
+        <img
+          className="d-block image--carousel"
+          src="../../../img/pollution.jpg"
+          alt="Third slide"
+        />
+        <div className="layer"></div>
+      </Carousel.Item>
     </Carousel>
   );
 }

@@ -93,7 +93,9 @@ const CarbonDioxidChart = () => {
         </div>
       )}
 
-      <h3>Today's value: {lastData.map((elem) => elem.trend)}</h3>
+      <h3 className="today--value">
+        Today's value: {lastData.map((elem) => elem.trend)}
+      </h3>
     </div>
   );
 };
