@@ -1,5 +1,14 @@
-$layout-breakpoint-small: 920px;
+$layout-breakpoint-large: 920px;
+$layout-breakpoint-extralarge: 1200px;
 
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@600&display=swap');
+
+
+.title{
+    font-family: 'Arima', cursive;
+    font-weight: 600;
+    font-size: 40px;
+}
 .chart-container{
   margin-top:115px;
   margin-bottom:50px;
@@ -27,7 +36,7 @@ $layout-breakpoint-small: 920px;
 }
 
 
-@media (max-width: $layout-breakpoint-small) {
+@media (max-width: $layout-breakpoint-large) {
     .img--chart{
         width:350px;
         margin:25px auto;
@@ -43,3 +52,11 @@ $layout-breakpoint-small: 920px;
         max-width:650px;
       };
 }
+@media (min-width: $layout-breakpoint-extralarge) {
+   
+    .chart--paragraph{
+        width: 60%;
+        margin:13px auto;
+    }
+} 
+    

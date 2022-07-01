@@ -7,6 +7,8 @@ import RangeStart from "components/Range/RangeStart";
 import ChartTemperature from "Chart/ChartTemperature";
 import RangeEnd from "components/Range/RangeEnd";
 import ButtonStyle from "components/Button/ButtonStyle";
+import { motion, AnimatePresence } from "framer-motion";
+
 const TemperatureChart = () => {
   const { /* loading, */ data } = useClientApi(url.temperatureUrl);
   const [temperature, setTemperature] = useState({});
@@ -42,70 +44,116 @@ const TemperatureChart = () => {
   };
   return (
     <div className="chart-container">
-      <h2 className="mt-4 title">Temperature</h2>
-      <img
+      <motion.h2
+        animate={{
+          scale: [1, 1.4, 1],
+          opacity: 1,
+        }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5, delay: 1 }}
+        className="mt-4 title"
+      >
+        Temperature
+      </motion.h2>
+
+      <motion.img
+        animate={{ scale: [0.7, 1], duration: 3.5, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.5, ease: "easeOut" }}
         src="../../../img/temperature_2.jpg"
         className="img--chart"
         alt="temperature"
       />
-      <p className="chart--paragraph">
-        The current global warming rate is not natural. From 1880 to 1981 was
-        (0.07°C / 0.13°F) per decade. Since 1981 this rate has increased to
-        (0.18°C / 0.32°F) Climate Change: Global Temperature. Some of the past
-        sudden increase on global temperature present in this graph, correspond
-        to the Roman Warm Period and the Medieval Warm Period. These events were
-        at regional and not global scale.
-      </p>
-      <p className="chart--paragraph">
-        The total average global temperature rise since the industrial
-        revolution is around (1.0 °C / 1.8 °F). Earth northern hemisphere is
-        warming faster. The arctic has warmed between (2 °C / 3.6 °F) and (4 °C
-        / 7.2 °F).
-      </p>
-      <p className="chart--paragraph">
-        This chart below provides on a monthly basis, the global mean surface
-        temperature anomaly from 1880.04 to the present (in celsius).
-      </p>
-      {toggle ? (
-        <div>
-          <div>
+
+      <motion.div
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+      >
+        <p className="chart--paragraph">
+          The current global warming rate is not natural. From 1880 to 1981 was
+          (0.07°C / 0.13°F) per decade. Since 1981 this rate has increased to
+          (0.18°C / 0.32°F) Climate Change: Global Temperature. Some of the past
+          sudden increase on global temperature present in this graph,
+          correspond to the Roman Warm Period and the Medieval Warm Period.
+          These events were at regional and not global scale.
+        </p>
+        <p className="chart--paragraph">
+          The total average global temperature rise since the industrial
+          revolution is around (1.0 °C / 1.8 °F). Earth northern hemisphere is
+          warming faster. The arctic has warmed between (2 °C / 3.6 °F) and (4
+          °C / 7.2 °F).
+        </p>
+        <p className="chart--paragraph">
+          This chart below provides on a monthly basis, the global mean surface
+          temperature anomaly from 1880.04 to the present (in celsius).
+        </p>
+      </motion.div>
+      <AnimatePresence>
+        {toggle ? (
+          <motion.div
+            key="box0"
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
             <ButtonStyle variant="primary" onClick={() => HandleToggle()}>
               Show chart
             </ButtonStyle>
+          </motion.div>
+        ) : (
+          <div>
+            <motion.div
+              key="box1"
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, y: "20%", scale: 0.8 }}
+              exit={{ opacity: 0, y: "20%", scale: 0.8 }}
+              transition={{ duration: 1 }}
+            >
+              <div className="chartStyle">
+                <ChartTemperature
+                  label="Temperature"
+                  rangeMin={rangeMin}
+                  rangeMax={rangeMax}
+                  elementDateValue={temperatureDateValue}
+                  background="rgba(176, 4, 124, 0.6)"
+                  border="rgb(220,11,130)"
+                />
+                <RangeStart
+                  dataLength={dataLength}
+                  rangeMin={rangeMin}
+                  rangeMax={rangeMax}
+                  onChange={(e) => updateMin(e.target.value)}
+                />
+                <RangeEnd
+                  dataLength={dataLength}
+                  rangeMin={rangeMin}
+                  rangeMax={rangeMax}
+                  onChange={(e) => updateMax(e.target.value)}
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => HandleToggle()}
+            >
+              <ButtonStyle variant="secondary">Hide chart</ButtonStyle>
+            </motion.div>
           </div>
-        </div>
-      ) : (
-        <div>
-          <div className="chartStyle">
-            <ChartTemperature
-              label="Temperature"
-              rangeMin={rangeMin}
-              rangeMax={rangeMax}
-              elementDateValue={temperatureDateValue}
-              background="rgba(176, 4, 124, 0.6)"
-              border="rgb(220,11,130)"
-            />
-            <RangeStart
-              dataLength={dataLength}
-              rangeMin={rangeMin}
-              rangeMax={rangeMax}
-              onChange={(e) => updateMin(e.target.value)}
-            />
-            <RangeEnd
-              dataLength={dataLength}
-              rangeMin={rangeMin}
-              rangeMax={rangeMax}
-              onChange={(e) => updateMax(e.target.value)}
-            />
-          </div>
-
-          <ButtonStyle variant="secondary" onClick={() => HandleToggle()}>
-            Hide chart
-          </ButtonStyle>
-        </div>
-      )}
-
-      <h3>Today's value: {lastData.map((elem) => elem.station)}</h3>
+        )}
+      </AnimatePresence>
+      <motion.div
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
+      >
+        <h3>Today's value: {lastData.map((elem) => elem.station)}</h3>
+      </motion.div>
     </div>
   );
 };

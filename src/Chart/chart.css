@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@600&display=swap");
+.title {
+  font-family: "Arima", cursive;
+  font-weight: 600;
+  font-size: 38px;
+}
+
 .chart-container {
   margin-top: 115px;
   margin-bottom: 50px;
@@ -5,8 +12,8 @@
 
 .chartStyle {
   margin: 0 auto;
-  max-height: 450px;
-  max-width: 750px;
+  max-height: 600px;
+  max-width: 900px;
 }
 
 .img--chart {
@@ -22,9 +29,8 @@
   font-size: 18px;
 }
 
-.chart--data {
-  margin-top: 55px;
-  margin-bottom: 20px;
+.today--value {
+  font-size: 24px;
 }
 
 @media (max-width: 920px) {
@@ -35,6 +41,18 @@
 
   .chart--paragraph {
     width: 80%;
+    margin: 13px auto;
+  }
+
+  .chartStyle {
+    margin: 0 auto;
+    max-height: 400px;
+    max-width: 650px;
+  }
+}
+@media (min-width: 1200px) {
+  .chart--paragraph {
+    width: 60%;
     margin: 13px auto;
   }
 }/*# sourceMappingURL=chart.css.map */

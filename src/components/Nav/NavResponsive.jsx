@@ -19,9 +19,9 @@ function NavResponsive() {
           fluid
           className="d-flex justify-content-between nav--container"
         >
-          <Navbar.Brand href="/" className="nav--title">
-            Global Warming
-          </Navbar.Brand>
+          <div className="nav--title">
+            <Navbar.Brand href="/">Global Warming</Navbar.Brand>
+          </div>
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" />
           <Navbar.Offcanvas
             id="offcanvasNavbar-expand-md"
@@ -29,26 +29,35 @@ function NavResponsive() {
             placement="end"
           >
             <Offcanvas.Header closeButton>
-              <Navbar.Brand href="/">Global Warming</Navbar.Brand>
+              <div className="nav--title">
+                <Navbar.Brand href="/">Global Warming</Navbar.Brand>
+              </div>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end pe-3">
-                <Nav.Link className="nav--page" href="temperature">
-                  Temperature
-                </Nav.Link>
-                <Nav.Link className="nav--page" href="co2">
-                  Co2
-                </Nav.Link>
+                <div className="nav--page">
+                  <Nav.Link className="nav--page" href="temperature">
+                    Temperature
+                  </Nav.Link>
+                </div>
+                <div className="nav--page">
+                  <Nav.Link className="nav--page" href="co2">
+                    Co2
+                  </Nav.Link>
+                </div>
                 <div className="nav--page">
                   <Nav.Link href="n2o">N2o</Nav.Link>
                 </div>
-
-                <Nav.Link className="nav--page" href="methane">
-                  Methane
-                </Nav.Link>
-                <Nav.Link className="nav--page" href="articIce">
-                  Artic Ice
-                </Nav.Link>
+                <div className="nav--page">
+                  <Nav.Link className="nav--page" href="methane">
+                    Methane
+                  </Nav.Link>
+                </div>
+                <div className="nav--page">
+                  <Nav.Link className="nav--page" href="articIce">
+                    Artic Ice
+                  </Nav.Link>
+                </div>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
