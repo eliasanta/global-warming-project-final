@@ -1,0 +1,27 @@
+$layout-breakpoint-large: 920px;
+$layout-breakpoint-medium:720px;
+$layout-breakpoint-small:600px;
+.button--style{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+@media (max-width: $layout-breakpoint-large) {
+    .button--style{
+        margin-top:60px;
+        margin-bottom:30px;
+    }
+}
+@media (max-width: $layout-breakpoint-small) {
+    .button--style{
+        margin-top:50px;
+        margin-bottom:30px;
+    }
+}
+@media (max-width: $layout-breakpoint-small) {
+    .button--style{
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+}
+

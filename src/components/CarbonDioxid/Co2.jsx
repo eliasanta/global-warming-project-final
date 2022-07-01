@@ -7,6 +7,7 @@ import RangeStart from "components/Range/RangeStart";
 import RangeEnd from "components/Range/RangeEnd";
 import ChartCo2 from "Chart/ChartCo2";
 import ButtonStyle from "components/Button/ButtonStyle";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CarbonDioxidChart = () => {
   const { /* loading, */ data } = useClientApi(url.CarbonDioxid);
@@ -40,62 +41,113 @@ const CarbonDioxidChart = () => {
   };
   return (
     <div className="chart-container">
-      <h2 className="mt-4 title">Carbon Dioxide</h2>
-      <img src="../../../img/co2.jpg" className="img--chart" alt="co2" />
-      <p className="chart--paragraph">
-        For thousands of years, the natural concentration of CO2 in earth
-        atmosphere was around 280 ppm. From the beginning of the industrial
-        revolution, human activities like the burning of fossil fuels,
-        deforestation, and livestock have increased this amount by more than
-        30%.
-      </p>
-      <p className="chart--paragraph">
-        This chart provide on a quasi-daily basis, the amount of carbon dioxide
-        (CO2) in the atmosphere from 2010.01.01 to the present. It is expressed
-        as a mole fraction in dry air, parts per million (ppm).
-      </p>
-      {toggle ? (
-        <div>
-          <div>
+      <motion.h2
+        animate={{
+          scale: [1, 1.4, 1],
+          opacity: 1,
+        }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5, delay: 1 }}
+        className="mt-4 title"
+      >
+        Carbon Dioxide
+      </motion.h2>
+      <motion.img
+        animate={{ scale: [0.7, 1], duration: 3.5, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.5, ease: "easeOut" }}
+        src="../../../img/co2.jpg"
+        className="img--chart"
+        alt="co2"
+      />
+      <motion.div
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+      >
+        <p className="chart--paragraph">
+          For thousands of years, the natural concentration of CO2 in earth
+          atmosphere was around 280 ppm. From the beginning of the industrial
+          revolution, human activities like the burning of fossil fuels,
+          deforestation, and livestock have increased this amount by more than
+          30%.
+        </p>
+        <p className="chart--paragraph">
+          This chart provide on a quasi-daily basis, the amount of carbon
+          dioxide (CO2) in the atmosphere from 2010.01.01 to the present. It is
+          expressed as a mole fraction in dry air, parts per million (ppm).
+        </p>
+      </motion.div>
+      <AnimatePresence>
+        {toggle ? (
+          <motion.div
+            key="box0"
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
             <ButtonStyle variant="primary" onClick={() => HandleToggle()}>
               Show chart
             </ButtonStyle>
+          </motion.div>
+        ) : (
+          <div>
+            <motion.div
+              key="box1"
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, y: "20%", scale: 0.8 }}
+              exit={{ opacity: 0, y: "20%", scale: 0.8 }}
+              transition={{ duration: 1 }}
+            >
+              <div className="chartStyle">
+                <ChartCo2
+                  label="CO2"
+                  rangeMin={rangeMin}
+                  rangeMax={rangeMax}
+                  elementDateValue={co2DateValue}
+                  background="rgba(75, 192, 192, 0.6)"
+                  border="rgb(128,86,245)"
+                />
+                <RangeStart
+                  dataLength={dataLength}
+                  rangeMin={rangeMin}
+                  rangeMax={rangeMax}
+                  onChange={(e) => updateMin(e.target.value)}
+                />
+                <RangeEnd
+                  dataLength={dataLength}
+                  rangeMin={rangeMin}
+                  rangeMax={rangeMax}
+                  onChange={(e) => updateMax(e.target.value)}
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.1 }}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+            >
+              <ButtonStyle onClick={() => HandleToggle()} variant="secondary">
+                Hide chart
+              </ButtonStyle>
+            </motion.div>
           </div>
-        </div>
-      ) : (
-        <div>
-          <div className="chartStyle">
-            <ChartCo2
-              label="CO2"
-              rangeMin={rangeMin}
-              rangeMax={rangeMax}
-              elementDateValue={co2DateValue}
-              background="rgba(75, 192, 192, 0.6)"
-              border="rgb(128,86,245)"
-            />
-            <RangeStart
-              dataLength={dataLength}
-              rangeMin={rangeMin}
-              rangeMax={rangeMax}
-              onChange={(e) => updateMin(e.target.value)}
-            />
-            <RangeEnd
-              dataLength={dataLength}
-              rangeMin={rangeMin}
-              rangeMax={rangeMax}
-              onChange={(e) => updateMax(e.target.value)}
-            />
-          </div>
-
-          <ButtonStyle variant="secondary" onClick={() => HandleToggle()}>
-            Hide chart
-          </ButtonStyle>
-        </div>
-      )}
-
-      <h3 className="today--value">
-        Today's value: {lastData.map((elem) => elem.trend)}
-      </h3>
+        )}
+      </AnimatePresence>
+      <motion.div
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
+      >
+        <h3 className="today--value">
+          Today's value: {lastData.map((elem) => elem.trend)}
+        </h3>
+      </motion.div>
     </div>
   );
 };

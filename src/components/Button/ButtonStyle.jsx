@@ -1,8 +1,9 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import "./button.scss";
 function ButtonStyle({ children, onClick, variant }) {
   return (
-    <Button onClick={onClick} variant={variant} className="mt-5 mb-3">
+    <Button onClick={onClick} variant={variant} className="button--style">
       {children}
     </Button>
   );

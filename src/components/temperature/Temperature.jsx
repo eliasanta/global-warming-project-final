@@ -14,10 +14,7 @@ const TemperatureChart = () => {
   const [temperature, setTemperature] = useState({});
   const [toggle, setToggle] = useState(true);
   let temperatureDateValue = Object.values(temperature);
-  /* const interDate = temperatureDateValue.map((elem) => Math.floor(elem.time)); */
-  /*  console.log(interDate); */
-  /*  var uniqueArr = [...new Set(interDate)];
-  console.log(uniqueArr); */
+
   const lastData = temperatureDateValue.slice(temperatureDateValue.length - 1);
   const dataLength = temperature.length;
   const [rangeMax, setRangeMax] = useState(1709); //dynamic set don' work
@@ -51,7 +48,7 @@ const TemperatureChart = () => {
         }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1.5, delay: 1 }}
+        transition={{ duration: 1.5, delay: 1.2 }}
         className="mt-4 title"
       >
         Temperature
@@ -71,7 +68,7 @@ const TemperatureChart = () => {
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.5 }}
       >
         <p className="chart--paragraph">
           The current global warming rate is not natural. From 1880 to 1981 was
@@ -137,11 +134,14 @@ const TemperatureChart = () => {
               </div>
             </motion.div>
             <motion.div
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              onClick={() => HandleToggle()}
+              transition={{ duration: 0.1 }}
             >
-              <ButtonStyle variant="secondary">Hide chart</ButtonStyle>
+              <ButtonStyle onClick={() => HandleToggle()} variant="secondary">
+                Hide chart
+              </ButtonStyle>
             </motion.div>
           </div>
         )}
@@ -150,7 +150,7 @@ const TemperatureChart = () => {
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.3 }}
       >
         <h3>Today's value: {lastData.map((elem) => elem.station)}</h3>
       </motion.div>

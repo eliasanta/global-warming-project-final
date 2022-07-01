@@ -18,12 +18,14 @@ $layout-breakpoint-extralarge: 1200px;
     margin:0 auto;
     max-height:600px;
     max-width:900px;
+    margin-top:70px;
   };
 
 .img--chart{
     width:700px;
     margin:30px auto;
     border-radius: 7px;
+    margin-bottom:40px;
 }
 .chart--paragraph{
     width: 70%;
@@ -50,6 +52,7 @@ $layout-breakpoint-extralarge: 1200px;
         margin:0 auto;
         max-height:400px;
         max-width:650px;
+        margin-top:70px;
       };
 }
 @media (min-width: $layout-breakpoint-extralarge) {

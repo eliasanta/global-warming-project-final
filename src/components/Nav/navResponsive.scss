@@ -1,4 +1,4 @@
-$layout-breakpoint-small: 920px;
+$layout-breakpoint-large: 920px;
 .nav--container{
     padding:9px;
 }
@@ -14,7 +14,7 @@ $layout-breakpoint-small: 920px;
         transform: scale(0.95)
     }
 }
-@media (max-width: $layout-breakpoint-small) {
+@media (max-width: $layout-breakpoint-large) {
     .nav--container{
         padding:6px;
     }
