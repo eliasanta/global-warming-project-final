@@ -11,7 +11,7 @@ The data are from API https://global-warming.org/
 
 ## Home Page
 
-![App Screenshot](/img/readMeImage/Home.jpeg)
+![App Screenshot](public/img/readMeImage/Home.jpeg)
 
 In the Home Page there is an automatic Carousel with some images , with the arrows it's possible change it(2).
 In the nav bar you can choose between pages "temperature","cO2","N2o","Methane" and "artic Ice" situation
