@@ -8,7 +8,7 @@ function HomeDescription() {
     <div className="description--container">
       <div className="description">
         <h2 className="home--title mb-4">Global Warming live graphs</h2>
-        <div data-aos-duration="2500" data-aos="fade-right">
+        <div data-aos-duration="2000" data-aos="fade-up">
           <p>
             This site delivers up to date information about the earth's current
             temperature, the concentration of greenhouse gases in the
@@ -20,7 +20,7 @@ function HomeDescription() {
             problem with some data.
           </p>
         </div>
-        <div data-aos="fade-left" data-aos-duration="2500" className="mt-5">
+        <div data-aos="fade-up" data-aos-duration="2000" className="mt-5">
           <h4>What is Global Warming?</h4>
           <p>
             Global warming is the long-term heating of Earth’s climate system

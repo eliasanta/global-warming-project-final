@@ -8,30 +8,77 @@ import IceChart from "components/Ice/Ice";
 import HomeCarousel from "components/Home/HomeCarousel";
 import HomeDescription from "components/Home/HomeDescription";
 import { AnimatePresence } from "framer-motion";
+import { NotFound } from "components/PageNotFound/NotFound";
+import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
 
 function Pages() {
   const location = useLocation();
   return (
-    <div>
-      <AnimatePresence exitBeforeEnter>
-        <Routes location={location} key={location}>
-          <Route
-            path="/"
-            element={
-              <div>
+    <AnimatePresence exitBeforeEnter>
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <div>
+              <ErrorBoundary>
                 <HomeCarousel />
+              </ErrorBoundary>
+              <ErrorBoundary>
                 <HomeDescription />
-              </div>
-            }
-          />
-          <Route path="/temperature" element={<TemperatureChart />} />
-          <Route path="/co2" element={<CarbonDioxidChart />} />
-          <Route path="/methane" element={<MethaneChart />} />
-          <Route path="/n2o" element={<NitrousOxideChart />} />
-          <Route path="/articIce" element={<IceChart />} />
-        </Routes>
-      </AnimatePresence>
-    </div>
+              </ErrorBoundary>
+            </div>
+          }
+        />
+        <Route
+          path="/temperature"
+          element={
+            <ErrorBoundary>
+              <TemperatureChart />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/co2"
+          element={
+            <ErrorBoundary>
+              <CarbonDioxidChart />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/methane"
+          element={
+            <ErrorBoundary>
+              <MethaneChart />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/n2o"
+          element={
+            <ErrorBoundary>
+              <NitrousOxideChart />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/articIce"
+          element={
+            <ErrorBoundary>
+              <IceChart />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <ErrorBoundary>
+              <NotFound />
+            </ErrorBoundary>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
   );
 }
 

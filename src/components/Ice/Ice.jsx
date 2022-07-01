@@ -26,7 +26,9 @@ const IceChart = () => {
   const getData = () => {
     try {
       setIce(data.arcticData);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
   const HandleToggle = () => {
     setToggle((prev) => !prev);

@@ -1,5 +1,13 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .nav--container {
   padding: 9px;
+  width: 100%;
 }
 
 .nav--title {

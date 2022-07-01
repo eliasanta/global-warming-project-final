@@ -24,7 +24,9 @@ const NitrousOxideChart = () => {
   const getData = () => {
     try {
       setN2o(data.nitrous);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
   const HandleToggle = () => {
     setToggle((prev) => !prev);

@@ -10,7 +10,7 @@ import ButtonStyle from "components/Button/ButtonStyle";
 import { motion, AnimatePresence } from "framer-motion";
 
 const TemperatureChart = () => {
-  const { /* loading, */ data } = useClientApi(url.temperatureUrl);
+  const { data } = useClientApi(url.temperatureUrl);
   const [temperature, setTemperature] = useState({});
   const [toggle, setToggle] = useState(true);
   let temperatureDateValue = Object.values(temperature);
@@ -22,12 +22,14 @@ const TemperatureChart = () => {
 
   useEffect(() => {
     getData();
-  }); //provato a toglierlo e non da errori
+  });
 
   const getData = () => {
     try {
       setTemperature(data.result);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
   const HandleToggle = () => {
     setToggle((prev) => !prev);
@@ -40,7 +42,13 @@ const TemperatureChart = () => {
     setRangeMin(range);
   };
   return (
-    <div className="chart-container">
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+      className="chart-container"
+    >
       <motion.h2
         animate={{
           scale: [1, 1.4, 1],
@@ -154,7 +162,7 @@ const TemperatureChart = () => {
       >
         <h3>Today's value: {lastData.map((elem) => elem.station)}</h3>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -8,7 +8,6 @@ function NavResponsive() {
   return (
     <div>
       <Navbar
-        fixed="top"
         key="md"
         bg="primary"
         expand="md"

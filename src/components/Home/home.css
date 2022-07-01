@@ -21,10 +21,12 @@
 
 @media (max-width: 920px) {
   .description {
+    margin: 0 auto;
     width: 85%;
+    text-align: left;
   }
 
   .image--carousel {
-    height: 70vh;
+    height: 75vh;
   }
 }/*# sourceMappingURL=home.css.map */
