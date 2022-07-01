@@ -11,44 +11,39 @@ The data are from API https://global-warming.org/
 
 ## Home Page
 
-![App Screenshot](/src/img/Home.png)
+![App Screenshot](/img/readMeImage/Home.jpeg)
 
-## Home Page options
+In the Home Page there is an automatic Carousel with some images , with the arrows it's possible change it(2).
+In the nav bar you can choose between pages "temperature","cO2","N2o","Methane" and "artic Ice" situation
 
-![App Screenshot](/src/img/Home_arrows.png)
-In the Home Page you can choose between from some of the most popular cuisines in the world with a click in the square icons(2) , from our suggestions(3) using the arrows(4) or by sliding.
-If you have something in mind yet you can also write down in the search bar a dish or a keyword(1) and will appera a list of plates.
-Every time that a dish image is clicked it will open the recipe page with the instructions and the recipe's ingredients.
+## Home description
 
-## Cuisine Page
+![App Screenshot](/img/readMeImage/Home-description.jpeg)
+In the same page below the carousel there are some explanations about global warming problem
 
-![App Screenshot](/src/img/Cuisine_select.png)
-In the home page or in the Cuisine page you can choose from some of the most popular cuisine in the world and can see what you have choosed from the different color of the icon (5).
-On the page will be charghe some plate of the selected cuisine(6).
+## Page
 
-## Recipe page
+![App Screenshot](/img/readMeImage/temperature.jpeg)
 
-![App Screenshot](/src/img/Recipe.png)
-In this page there are the image of selected dish and the possibility to choose between the recipe and the ingredients by clicking the buttons(7)(8) as you can see in the nexts screen.
+If you open up on of the pages in the nav bar you go in the relative page
 
-## Recipe ingredients
+## Show Chart
 
-![App Screenshoot](/src/img/Recipe_ingredients.jpg)
+![App Screenshoot](/img/readMeImage/showChart.jpg)
 
-## Recipe Instructions
+In the same page beelow you can open up the relative chart(3) and see Today's value
 
-![App Screenshoot](/src/img/Recipe_instrucions.jpg)
+## Chart
 
-## Searched Page
+![App Screenshoot](/img/readMeImage/hiddenChart.jpg)
 
-![App Screenshot](/src/img/Searched.png)
-In this page you can see the results of your key word search(9).
+After opening the graph, you can see its trend and choose a time range with the appropriate selectors(5)(6).
+Whit the hide chart you can also close it(7).
 
 ## Built with
 
 - [React](https://it.reactjs.org/)
 - [Axios](https://github.com/axios/axios)
-- [Context API] (https://reactjs.org/docs/context.html)
 - [React Router] (https://www.w3schools.com/react/react_router.asp)
 
 ## API Reference
