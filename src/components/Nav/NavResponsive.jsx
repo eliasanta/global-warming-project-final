@@ -12,7 +12,7 @@ function NavResponsive() {
         bg="primary"
         expand="md"
         variant="dark"
-        className="NavBar nav--image"
+        className="NavBar nav--image fixed-top"
       >
         <Container
           fluid

@@ -1,10 +1,81 @@
+## Global Warming Project
+
+## Description
+
+This project give us some data about climate changing , i specific about Temperature, cO2 , N2O, Methane and Ice melt.
+The data are from API https://global-warming.org/
+
+## Link Applicazione
+
+[![Website](https://img.shields.io/website?style=for-the-badge&up_message=CLICK%20ME%21&url=https%3A%2F%2Flijo-book-search-project.netlify.app%2F)](https://global-warming-88e06.web.app/)
+
+## Home Page
+
+![App Screenshot](/src/img/Home.png)
+
+## Home Page options
+
+![App Screenshot](/src/img/Home_arrows.png)
+In the Home Page you can choose between from some of the most popular cuisines in the world with a click in the square icons(2) , from our suggestions(3) using the arrows(4) or by sliding.
+If you have something in mind yet you can also write down in the search bar a dish or a keyword(1) and will appera a list of plates.
+Every time that a dish image is clicked it will open the recipe page with the instructions and the recipe's ingredients.
+
+## Cuisine Page
+
+![App Screenshot](/src/img/Cuisine_select.png)
+In the home page or in the Cuisine page you can choose from some of the most popular cuisine in the world and can see what you have choosed from the different color of the icon (5).
+On the page will be charghe some plate of the selected cuisine(6).
+
+## Recipe page
+
+![App Screenshot](/src/img/Recipe.png)
+In this page there are the image of selected dish and the possibility to choose between the recipe and the ingredients by clicking the buttons(7)(8) as you can see in the nexts screen.
+
+## Recipe ingredients
+
+![App Screenshoot](/src/img/Recipe_ingredients.jpg)
+
+## Recipe Instructions
+
+![App Screenshoot](/src/img/Recipe_instrucions.jpg)
+
+## Searched Page
+
+![App Screenshot](/src/img/Searched.png)
+In this page you can see the results of your key word search(9).
+
+## Built with
+
+- [React](https://it.reactjs.org/)
+- [Axios](https://github.com/axios/axios)
+- [Context API] (https://reactjs.org/docs/context.html)
+- [React Router] (https://www.w3schools.com/react/react_router.asp)
+
+## API Reference
+
+| Documentation   | Link                                                              |
+| :-------------- | :---------------------------------------------------------------- |
+| Spoonacular API | [Developer Center - APIs ](https://spoonacular.com/food-api/docs) |
+
+## Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elia-santagiuliana-b10323143/)
+
+# Acknowledgements
+
+- [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+- [Open Library](https://openlibrary.org/)
+- [Webpack Tutorial: how to set up webpack 5 from scratch](https://www.taniarascia.com/how-to-use-webpack)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run: teeeeeeeststststts
+In the project directory, you can run:
 
 ### `npm start`
 
