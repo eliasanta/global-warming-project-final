@@ -11,31 +11,31 @@ The data are from API https://global-warming.org/
 
 ## Home Page
 
-![App Screenshot](public/img/readMeImage/Home.jpeg)
+![App Screenshot](./public/img/readMeImage/Home.jpg)
 
 In the Home Page there is an automatic Carousel with some images , with the arrows it's possible change it(2).
 In the nav bar you can choose between pages "temperature","cO2","N2o","Methane" and "artic Ice" situation
 
 ## Home description
 
-![App Screenshot](/img/readMeImage/Home-description.jpeg)
+![App Screenshot](./public/img/readMeImage/Home-description.jpg)
 In the same page below the carousel there are some explanations about global warming problem
 
 ## Page
 
-![App Screenshot](/img/readMeImage/temperature.jpeg)
+![App Screenshot](.public/img/readMeImage/temperature.jpg)
 
 If you open up on of the pages in the nav bar you go in the relative page
 
 ## Show Chart
 
-![App Screenshoot](/img/readMeImage/showChart.jpg)
+![App Screenshoot](./public/img/readMeImage/showChart.jpg)
 
 In the same page beelow you can open up the relative chart(3) and see Today's value
 
 ## Chart
 
-![App Screenshoot](/img/readMeImage/hiddenChart.jpg)
+![App Screenshoot](./public/img/readMeImage/hiddenChart.jpg)
 
 After opening the graph, you can see its trend and choose a time range with the appropriate selectors(5)(6).
 Whit the hide chart you can also close it(7).
@@ -44,25 +44,44 @@ Whit the hide chart you can also close it(7).
 
 - [React](https://it.reactjs.org/)
 - [Axios](https://github.com/axios/axios)
-- [React Router] (https://www.w3schools.com/react/react_router.asp)
+- [React Chartjs-2](https://www.chartjs.org/docs/latest/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+- [React Router](https://www.w3schools.com/react/react_router.asp)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [SASS](https://sass-lang.com/)
 
 ## API Reference
 
-| Documentation   | Link                                                              |
-| :-------------- | :---------------------------------------------------------------- |
-| Spoonacular API | [Developer Center - APIs ](https://spoonacular.com/food-api/docs) |
+| Documentation      | Link                                |
+| :----------------- | :---------------------------------- |
+| Global Warning API | [Home](https://global-warming.org/) |
 
 ## Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elia-santagiuliana-b10323143/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elia-santagiuliana/)
 
 # Acknowledgements
 
 - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 - [Awesome README](https://github.com/matiassingers/awesome-readme)
 - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-- [Open Library](https://openlibrary.org/)
 - [Webpack Tutorial: how to set up webpack 5 from scratch](https://www.taniarascia.com/how-to-use-webpack)
+
+# Getting Started with my project
+
+If you want to download the project locally and check that it works correctly, you need to do a series of steps.
+
+Clone the project with your code in your code editor.
+
+### `$git clone https://github.com/eliasanta/global-warming-project-final.git`
+
+Install project's dependecies with:
+
+### `npm install`
+
+Run the app in the development mode with this command:
+
+### `npm start`
 
 # Getting Started with Create React App
 
