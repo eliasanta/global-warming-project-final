@@ -6,7 +6,7 @@ import RangeStart from "components/Range/RangeStart";
 import RangeEnd from "components/Range/RangeEnd";
 import ChartN2oMethane from "Chart/ChartN2oMethane";
 import ButtonStyle from "components/Button/ButtonStyle";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const NitrousOxideChart = () => {
   const { /* loading, */ data } = useClientApi(url.NitrousOxideUrl);
@@ -14,19 +14,18 @@ const NitrousOxideChart = () => {
   const [toggle, setToggle] = useState(true);
   let n2oDateValue = Object.values(n2o);
   const lastData = n2oDateValue.slice(n2oDateValue.length - 1);
+
   useEffect(() => {
     getData();
   });
-  const dataLength = n2o.length;
-  const [rangeMax, setRangeMax] = useState(254); //dynamic set don' work
-  const [rangeMin, setRangeMin] = useState(0); //dynamic set don't work
 
+  const dataLength = n2o.length;
+  const [rangeMax, setRangeMax] = useState(254);
+  const [rangeMin, setRangeMin] = useState(0);
   const getData = () => {
     try {
       setN2o(data.nitrous);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   const HandleToggle = () => {
     setToggle((prev) => !prev);
@@ -137,6 +136,7 @@ const NitrousOxideChart = () => {
           </div>
         )}
       </AnimatePresence>
+
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}

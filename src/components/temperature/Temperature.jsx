@@ -46,16 +46,18 @@ const TemperatureChart = () => {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 3 }}
       className="chart-container"
     >
+      <h1>test</h1>
+    </motion.div>
+    /*
       <motion.h2
         animate={{
           scale: [1, 1.4, 1],
           opacity: 1,
         }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 1.5, delay: 1.2 }}
         className="mt-4 title"
       >
@@ -65,7 +67,6 @@ const TemperatureChart = () => {
       <motion.img
         animate={{ scale: [0.7, 1], duration: 3.5, opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ delay: 0.5, ease: "easeOut" }}
         src="../../../img/temperature_2.jpg"
         className="img--chart"
@@ -75,7 +76,6 @@ const TemperatureChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
         <p className="chart--paragraph">
@@ -116,7 +116,7 @@ const TemperatureChart = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               initial={{ opacity: 0, y: "20%", scale: 0.8 }}
               exit={{ opacity: 0, y: "20%", scale: 0.8 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.8 }}
             >
               <div className="chartStyle">
                 <ChartTemperature
@@ -144,7 +144,6 @@ const TemperatureChart = () => {
             <motion.div
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
-              exit={{ opacity: 0 }}
               transition={{ duration: 0.1 }}
             >
               <ButtonStyle onClick={() => HandleToggle()} variant="secondary">
@@ -157,12 +156,12 @@ const TemperatureChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 1.3 }}
       >
         <h3>Today's value: {lastData.map((elem) => elem.station)}</h3>
-      </motion.div>
-    </motion.div>
+        </motion.div>*/
+
+    /* </motion.div> */
   );
 };
 

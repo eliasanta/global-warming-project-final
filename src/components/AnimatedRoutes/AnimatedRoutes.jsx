@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import TemperatureChart from "components/temperature/Temperature";
 import NitrousOxideChart from "components/NitrousOxide/NitrousOxide";
 import CarbonDioxidChart from "components/CarbonDioxid/Co2";
@@ -12,14 +7,14 @@ import MethaneChart from "components/Methane/Methane";
 import IceChart from "components/Ice/Ice";
 import HomeCarousel from "components/Home/HomeCarousel";
 import HomeDescription from "components/Home/HomeDescription";
-/* import { AnimatePresence } from "framer-motion"; */
+import { AnimatePresence } from "framer-motion";
 import { NotFound } from "components/PageNotFound/NotFound";
 import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
 
-function Pages() {
+function AnimatedRoutes() {
   const location = useLocation();
   return (
-    <Router>
+    <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
@@ -83,8 +78,8 @@ function Pages() {
           }
         />
       </Routes>
-    </Router>
+    </AnimatePresence>
   );
 }
 
-export default Pages;
+export default AnimatedRoutes;
