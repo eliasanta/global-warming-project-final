@@ -11,6 +11,7 @@
 
 .description--container {
   margin-top: 40px;
+  width: 100%;
 }
 
 .description {
@@ -27,6 +28,6 @@
   }
 
   .image--carousel {
-    height: 75vh;
+    height: 85vh;
   }
 }/*# sourceMappingURL=home.css.map */

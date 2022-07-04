@@ -47,7 +47,7 @@ const IceChart = () => {
     >
       <motion.h2
         animate={{
-          scale: [1, 1.2, 1],
+          scale: [1, 1.1, 1],
           opacity: 1,
         }}
         initial={{ opacity: 0 }}

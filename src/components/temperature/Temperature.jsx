@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import useClientApi from "API/apiClient";
 import url from "API/api";
 import "Chart/chart.scss";
-import "./temperature.scss";
 import RangeStart from "components/Range/RangeStart";
 import ChartTemperature from "Chart/ChartTemperature";
 import RangeEnd from "components/Range/RangeEnd";
@@ -49,7 +48,7 @@ const TemperatureChart = () => {
     >
       <motion.h2
         animate={{
-          scale: [1, 1.2, 1],
+          scale: [1, 1.1, 1],
           opacity: 1,
         }}
         initial={{ opacity: 0 }}

@@ -3,4 +3,9 @@
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.footer--icon {
+  width: 40px;
+  margin-left: 50px;
 }/*# sourceMappingURL=Footer.css.map */
