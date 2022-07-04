@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import useClientApi from "API/apiClient";
 import url from "API/api";
 import "Chart/chart.scss";
-import "./co2.scss";
 import RangeStart from "components/Range/RangeStart";
 import RangeEnd from "components/Range/RangeEnd";
 import ChartCo2 from "Chart/ChartCo2";
@@ -40,24 +39,27 @@ const CarbonDioxidChart = () => {
     setRangeMin(range);
   };
   return (
-    <div className="chart-container">
+    <motion.div
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="chart-container"
+    >
       <motion.h2
         animate={{
-          scale: [1, 1.4, 1],
+          scale: [1, 1.2, 1],
           opacity: 1,
         }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1.5, delay: 1 }}
+        transition={{ duration: 1, delay: 1 }}
         className="mt-4 title"
       >
         Carbon Dioxide
       </motion.h2>
       <motion.img
-        animate={{ scale: [0.7, 1], duration: 3.5, opacity: 1 }}
+        animate={{ scale: [0.7, 1], duration: 3, opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0.5, ease: "easeOut" }}
+        transition={{ ease: "easeOut" }}
         src="../../../img/co2.jpg"
         className="img--chart"
         alt="co2"
@@ -65,7 +67,6 @@ const CarbonDioxidChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
         <p className="chart--paragraph">
@@ -141,14 +142,13 @@ const CarbonDioxidChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
         <h3 className="today--value">
           Today's value: {lastData.map((elem) => elem.trend)}
         </h3>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

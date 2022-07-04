@@ -43,36 +43,29 @@ const TemperatureChart = () => {
   };
   return (
     <motion.div
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 3 }}
+      transition={{ duration: 1 }}
       className="chart-container"
     >
-      <h1>test</h1>
-    </motion.div>
-    /*
       <motion.h2
         animate={{
-          scale: [1, 1.4, 1],
+          scale: [1, 1.2, 1],
           opacity: 1,
         }}
         initial={{ opacity: 0 }}
-        transition={{ duration: 1.5, delay: 1.2 }}
+        transition={{ duration: 1, delay: 1 }}
         className="mt-4 title"
       >
         Temperature
       </motion.h2>
-
       <motion.img
-        animate={{ scale: [0.7, 1], duration: 3.5, opacity: 1 }}
+        animate={{ scale: [0.7, 1], duration: 3, opacity: 1 }}
         initial={{ opacity: 0 }}
-        transition={{ delay: 0.5, ease: "easeOut" }}
+        transition={{ ease: "easeOut" }}
         src="../../../img/temperature_2.jpg"
         className="img--chart"
         alt="temperature"
       />
-
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
@@ -159,9 +152,8 @@ const TemperatureChart = () => {
         transition={{ duration: 1.3 }}
       >
         <h3>Today's value: {lastData.map((elem) => elem.station)}</h3>
-        </motion.div>*/
-
-    /* </motion.div> */
+      </motion.div>
+    </motion.div>
   );
 };
 

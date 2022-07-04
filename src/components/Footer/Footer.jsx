@@ -1,5 +1,6 @@
 import "./Footer.scss";
 import React from "react";
+
 import { MDBFooter, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 
 export default function Footer() {
@@ -46,8 +47,14 @@ export default function Footer() {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2022 Copyright:
+        © 2022:
         <span className="text-white"> Elia Santagiuliana</span>
+        <img
+          src="../../../img/footer_Icon/es-logo2.png"
+          alt="footer-img
+        "
+          className="footer--icon"
+        ></img>
       </div>
     </MDBFooter>
   );

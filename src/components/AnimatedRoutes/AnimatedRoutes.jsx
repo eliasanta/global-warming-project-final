@@ -13,6 +13,7 @@ import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
 
 function AnimatedRoutes() {
   const location = useLocation();
+
   return (
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>

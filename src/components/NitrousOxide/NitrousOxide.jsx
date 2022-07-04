@@ -37,24 +37,27 @@ const NitrousOxideChart = () => {
     setRangeMin(range);
   };
   return (
-    <div className="chart-container">
+    <motion.div
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="chart-container"
+    >
       <motion.h2
         animate={{
-          scale: [1, 1.4, 1],
+          scale: [1, 1.2, 1],
           opacity: 1,
         }}
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1.5, delay: 1.2 }}
+        transition={{ duration: 1, delay: 1 }}
         className="mt-4 title"
       >
         Nitrous Oxide
       </motion.h2>
       <motion.img
-        animate={{ scale: [0.7, 1], duration: 3.5, opacity: 1 }}
+        animate={{ scale: [0.7, 1], duration: 3, opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0.5, ease: "easeOut" }}
+        transition={{ ease: "easeOut" }}
         src="../../../img/n2o.jpg"
         className="img--chart"
         alt="nitrous oxide"
@@ -62,7 +65,6 @@ const NitrousOxideChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
         <p className="chart--paragraph">
@@ -124,9 +126,9 @@ const NitrousOxideChart = () => {
               </div>
             </motion.div>
             <motion.div
+              exit={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
-              exit={{ opacity: 0 }}
               transition={{ duration: 0.1 }}
             >
               <ButtonStyle variant="secondary" onClick={() => HandleToggle()}>
@@ -140,12 +142,11 @@ const NitrousOxideChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 1.3 }}
       >
         <h3>Today's value: {lastData.map((elem) => elem.trend)}</h3>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

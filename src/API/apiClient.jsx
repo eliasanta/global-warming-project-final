@@ -12,10 +12,6 @@ function useClientApi(url) {
     axios
       .get(url)
       .then((response) => {
-        /* if (!(Object.entries(response).length === 0)) {
-          console.log(Object.entries(response).length);
-          
-        } */
         setData(response.data);
       })
       .catch((err) => {
