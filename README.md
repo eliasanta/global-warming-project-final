@@ -2,7 +2,7 @@
 
 ## Description
 
-This project give us some data about climate changing , i specific about Temperature, cO2 , N2O, Methane and Ice melt.
+This project give us some data about climate changing , in specific about Temperature, cO2 , N2O, Methane and Ice melt.
 The data are from API https://global-warming.org/
 
 ## Link Applicazione
@@ -13,32 +13,32 @@ The data are from API https://global-warming.org/
 
 ![App Screenshot](./public/img/readMeImage/Home.jpg)
 
-In the Home Page there is an automatic Carousel with some images , with the arrows it's possible change it(2).
-In the nav bar you can choose between pages "temperature","cO2","N2o","Methane" and "artic Ice" situation
+In the Home Page there is an automatic Carousel with some images , with the arrows it's possible to change(2).
+In the nav bar you can choose between pages "temperature", "cO2", "N2o", "Methane" and "Artic Ice" situation
 
 ## Home description
 
 ![App Screenshot](./public/img/readMeImage/Home-description.jpg)
-In the same page below the carousel there are some explanations about global warming problem
+In the same page below the carousel there are some general informations about global warming.
 
 ## Page
 
-![App Screenshot](.public/img/readMeImage/temperature.jpg)
+![App Screenshot](./public/img/readMeImage/temperature.jpg)
 
-If you open up on of the pages in the nav bar you go in the relative page
+If you open up on of the pages in the nav bar you go in the relative page.
 
 ## Show Chart
 
 ![App Screenshoot](./public/img/readMeImage/showChart.jpg)
 
-In the same page beelow you can open up the relative chart(3) and see Today's value
+In the same page beelow you can open up the relative chart(3) and see Today's value.
 
 ## Chart
 
-![App Screenshoot](./public/img/readMeImage/hiddenChart.jpg)
+![App Screenshoot](./public/img/readMeImage/hideChart.jpg)
 
 After opening the graph, you can see its trend and choose a time range with the appropriate selectors(5)(6).
-Whit the hide chart you can also close it(7).
+With the hide chart button you can also close it(7).
 
 ## Built with
 
