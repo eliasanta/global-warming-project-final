@@ -60,7 +60,7 @@ const CarbonDioxidChart = () => {
         animate={{ scale: [0.7, 1], duration: 3, opacity: 1 }}
         initial={{ opacity: 0 }}
         transition={{ ease: "easeOut" }}
-        src="../../../img/co2.jpg"
+        src="/img/co2.jpg"
         className="img--chart"
         alt="co2"
       />

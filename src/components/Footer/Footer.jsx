@@ -15,6 +15,8 @@ export default function Footer() {
           <a
             className="btn btn-outline-light btn-floating m-1"
             href="https://www.facebook.com/eliasanta/"
+            target="_blank"
+            rel="noreferrer"
             role="button"
           >
             <MDBIcon fab icon="facebook-f" />
@@ -22,6 +24,8 @@ export default function Footer() {
           <a
             className="btn btn-outline-light btn-floating m-1"
             href="https://www.instagram.com/eliasanta_/"
+            target="_blank"
+            rel="noreferrer"
             role="button"
           >
             <MDBIcon fab icon="instagram" />
@@ -29,6 +33,8 @@ export default function Footer() {
           <a
             className="btn btn-outline-light btn-floating m-1"
             href="https://www.linkedin.com/in/elia-santagiuliana/"
+            target="_blank"
+            rel="noreferrer"
             role="button"
           >
             <MDBIcon fab icon="linkedin-in" />
@@ -36,6 +42,8 @@ export default function Footer() {
           <a
             className="btn btn-outline-light btn-floating m-1"
             href="https://github.com/eliasanta"
+            target="_blank"
+            rel="noreferrer"
             role="button"
           >
             <MDBIcon fab icon="github" />

@@ -8,7 +8,7 @@ import IceChart from "components/Ice/Ice";
 import HomeCarousel from "components/Home/HomeCarousel";
 import HomeDescription from "components/Home/HomeDescription";
 import { AnimatePresence } from "framer-motion";
-import { NotFound } from "components/PageNotFound/NotFound";
+import { NotFound } from "pages/PageNotFound/NotFound";
 import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
 
 function AnimatedRoutes() {
@@ -20,62 +20,74 @@ function AnimatedRoutes() {
         <Route
           path="/"
           element={
-            <div>
+            <>
               <ErrorBoundary>
                 <HomeCarousel />
               </ErrorBoundary>
               <ErrorBoundary>
                 <HomeDescription />
               </ErrorBoundary>
-            </div>
+            </>
           }
         />
         <Route
           path="/temperature"
           element={
-            <ErrorBoundary>
-              <TemperatureChart />
-            </ErrorBoundary>
+            <>
+              <ErrorBoundary>
+                <TemperatureChart />
+              </ErrorBoundary>
+            </>
           }
         />
         <Route
           path="/co2"
           element={
-            <ErrorBoundary>
-              <CarbonDioxidChart />
-            </ErrorBoundary>
+            <>
+              <ErrorBoundary>
+                <CarbonDioxidChart />
+              </ErrorBoundary>
+            </>
           }
         />
         <Route
           path="/methane"
           element={
-            <ErrorBoundary>
-              <MethaneChart />
-            </ErrorBoundary>
+            <>
+              <ErrorBoundary>
+                <MethaneChart />
+              </ErrorBoundary>
+            </>
           }
         />
         <Route
           path="/n2o"
           element={
-            <ErrorBoundary>
-              <NitrousOxideChart />
-            </ErrorBoundary>
+            <>
+              <ErrorBoundary>
+                <NitrousOxideChart />
+              </ErrorBoundary>
+            </>
           }
         />
         <Route
           path="/articIce"
           element={
-            <ErrorBoundary>
-              <IceChart />
-            </ErrorBoundary>
+            <>
+              <ErrorBoundary>
+                <IceChart />
+              </ErrorBoundary>
+            </>
           }
         />
         <Route
           path="*"
           element={
-            <ErrorBoundary>
-              <NotFound />
-            </ErrorBoundary>
+            <>
+              <ErrorBoundary>
+                <NotFound />
+              </ErrorBoundary>
+            </>
           }
         />
       </Routes>

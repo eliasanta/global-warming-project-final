@@ -8,7 +8,7 @@ function HomeCarousel() {
       <Carousel.Item interval={5000} className="image--container">
         <img
           className="d-block image--carousel"
-          src="../../../img/oneWorld.jpg"
+          src="/img/oneWorld.jpg"
           alt="First slide"
         />
         <div className="layer"></div>
@@ -16,7 +16,7 @@ function HomeCarousel() {
       <Carousel.Item interval={5000} className="image--container">
         <img
           className="d-block image--carousel"
-          src="../../../img/planetb.jpg"
+          src="/img/planetb.jpg"
           alt="Second slide"
         />
         <div className="layer"></div>
@@ -24,7 +24,7 @@ function HomeCarousel() {
       <Carousel.Item interval={5000} className="image--container">
         <img
           className="d-block image--carousel"
-          src="../../../img/world.jpg"
+          src="/img/world.jpg"
           alt="Third slide"
         />
         <div className="layer"></div>
@@ -32,7 +32,7 @@ function HomeCarousel() {
       <Carousel.Item interval={5000} className="image--container">
         <img
           className="d-block image--carousel"
-          src="../../../img/handWorld.jpg"
+          src="/img/handWorld.jpg"
           alt="Third slide"
         />
         <div className="layer"></div>
@@ -40,7 +40,7 @@ function HomeCarousel() {
       <Carousel.Item interval={5000} className="image--container">
         <img
           className="d-block image--carousel"
-          src="../../../img/pollution.jpg"
+          src="/img/pollution.jpg"
           alt="Third slide"
         />
         <div className="layer"></div>

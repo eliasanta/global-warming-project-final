@@ -58,7 +58,7 @@ const NitrousOxideChart = () => {
         animate={{ scale: [0.7, 1], duration: 3, opacity: 1 }}
         initial={{ opacity: 0 }}
         transition={{ ease: "easeOut" }}
-        src="../../../img/n2o.jpg"
+        src="/img/n2o.jpg"
         className="img--chart"
         alt="nitrous oxide"
       />

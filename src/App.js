@@ -1,18 +1,21 @@
-import "./App.css";
+import "./App.scss";
+import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
 import NavResponsive from "./components/Nav/NavResponsive";
-import AnimatedRoutes from "components/AnimatedRoutes/AnimatedRoutes";
+import AnimatedRoutes from "pages/AnimatedRoutes/AnimatedRoutes";
 import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "components/Footer/Footer";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <NavResponsive />
-        <AnimatedRoutes />
-        <Footer />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div className="App">
+          <NavResponsive />
+          <AnimatedRoutes />
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 
