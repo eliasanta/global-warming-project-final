@@ -2,18 +2,23 @@ import React, { useState, useEffect } from "react";
 import useClientApi from "API/apiClient";
 import url from "API/api";
 import "Chart/chart.scss";
-import RangeStart from "components/Range/RangeStart";
+/* import RangeStart from "components/Range/RangeStart"; */
 import ChartTemperature from "Chart/ChartTemperature";
-import RangeEnd from "components/Range/RangeEnd";
+/* import RangeEnd from "components/Range/RangeEnd"; */
+import Search from "components/Search/Search";
 import ButtonStyle from "components/Button/ButtonStyle";
 import { motion, AnimatePresence } from "framer-motion";
 
 const TemperatureChart = () => {
   const { data } = useClientApi(url.temperatureUrl);
+  const multipleData = data.result.map((elem) => Math.floor(elem.time));
+
+  var uniqueArr = [...new Set(multipleData)];
+
+  console.log(uniqueArr);
   const [temperature, setTemperature] = useState({});
   const [toggle, setToggle] = useState(true);
   let temperatureDateValue = Object.values(temperature);
-
   const lastData = temperatureDateValue.slice(temperatureDateValue.length - 1);
   const dataLength = temperature.length;
   const [rangeMax, setRangeMax] = useState(1709); //dynamic set don' work
@@ -26,19 +31,17 @@ const TemperatureChart = () => {
   const getData = () => {
     try {
       setTemperature(data.result);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   const HandleToggle = () => {
     setToggle((prev) => !prev);
   };
 
-  const updateMax = (range) => {
-    setRangeMax(range);
-  };
-  const updateMin = (range) => {
-    setRangeMin(range);
+  const getDateSelected = (data) => {
+    setRangeMin(data.startDate);
+    setRangeMax(data.endDate);
+    console.log("these are the start data", data.startDate);
+    console.log("these are the end data", data.endDate);
   };
   return (
     <motion.div
@@ -119,7 +122,8 @@ const TemperatureChart = () => {
                   background="rgba(176, 4, 124, 0.6)"
                   border="rgb(220,11,130)"
                 />
-                <RangeStart
+                <Search onSubmit={getDateSelected} />
+                {/*  <RangeStart
                   dataLength={dataLength}
                   rangeMin={rangeMin}
                   rangeMax={rangeMax}
@@ -130,7 +134,7 @@ const TemperatureChart = () => {
                   rangeMin={rangeMin}
                   rangeMax={rangeMax}
                   onChange={(e) => updateMax(e.target.value)}
-                />
+                />*/}
               </div>
             </motion.div>
             <motion.div
@@ -148,7 +152,7 @@ const TemperatureChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        transition={{ duration: 1.3 }}
+        transition={{ duration: 1 }}
       >
         <h3>Today's value: {lastData.map((elem) => elem.station)}</h3>
       </motion.div>

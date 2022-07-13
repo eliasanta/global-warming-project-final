@@ -146,7 +146,7 @@ const IceChart = () => {
       <motion.div
         animate={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        transition={{ duration: 1.3 }}
+        transition={{ duration: 1 }}
       >
         <h3>
           {" "}
